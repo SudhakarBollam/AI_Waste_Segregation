@@ -26,4 +26,4 @@ app.register_blueprint(predict_bp, url_prefix="/api")
 PORT = int(os.environ.get("PORT", 5000))
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=PORT)
+    app.run(host="0.0.0.0", port=7860)
