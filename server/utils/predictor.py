@@ -3,11 +3,13 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
+# Get server root directory
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-model_path = os.path.join(BASE_DIR, "model", "mobilenetv2_waste_classifier.h5")
+# Model path
+MODEL_PATH = os.path.join(BASE_DIR, "model", "mobilenetv2_waste_classifier.h5")
 
-model = load_model(model_path)
+model = load_model(MODEL_PATH)
 
 CLASSES = ['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
 
