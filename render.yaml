@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-waste-segregation
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    rootDir: server
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
