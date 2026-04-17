@@ -8,14 +8,10 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Model path
-MODEL_PATH = "model/mobilenetv2_waste_classifier.h5"
+MODEL_PATH = "model/new_model.keras"
 
-model = load_model(
-    MODEL_PATH,
-    compile=False,
-    custom_objects=None,
-    safe_mode=False
-)
+model = load_model(MODEL_PATH, compile=False)
+
 CLASSES = ['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
 
 RECYCLABLE = ['cardboard', 'glass', 'metal', 'paper', 'plastic']
