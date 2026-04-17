@@ -1,7 +1,7 @@
 import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import PredictionCard from "./PredictionCard";
 
-const PREDICT_URL = "http://localhost:5000/api/predict";
+const PREDICT_URL = `${import.meta.env.VITE_API_URL}/predict`;
 
 function UploadCard() {
   const [file, setFile] = useState(null);
